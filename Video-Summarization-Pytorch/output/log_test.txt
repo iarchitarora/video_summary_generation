@@ -1,0 +1,11 @@
+==========
+Args:Namespace(input='static/uploads/virat_test_video2.mp4', output='Video-Summarization-Pytorch/makedata/', seed=1, gpu='0', input_dim=2048, hidden_dim=256, num_layers=1, rnn_cell='lstm', dataset='Video-Summarization-Pytorch/makedata/virat_test_video2.h5', model='Video-Summarization-Pytorch/model/best_model_epoch60.pth.tar', save_dir='Video-Summarization-Pytorch/output/', use_cpu=False, save_name='virat_test_video2.mp4', fps=30, width=640, height=480, train_data=False, percent=0.1)
+==========
+Currently using GPU 0
+Initialize dataset Video-Summarization-Pytorch/makedata/virat_test_video2.h5
+Load model
+Model size: 4.72320M
+Loading checkpoint from 'Video-Summarization-Pytorch/model/best_model_epoch60.pth.tar'
+Summary
+[INFO] Video Summary
+[OUTPUT] total 324 frame, ignore 2970 frame

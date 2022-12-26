@@ -1,0 +1,52 @@
+<!doctype html>
+<title>Python Flask - Video Upload and Play Example</title>
+<h2>Select a video to upload and generate its summary</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+{% if filenames %}
+    {% for filename in filenames %}
+	<div style="margin: 10px auto;float:left;">
+		<video autoplay="autoplay" controls="controls" preload="preload" width="730" 
+    height="410" src="{{ url_for('display_video', filename=filename) }}" type="video/mp4">
+	</div>
+{% endfor %}
+{% endif %}
+
+
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Upload">
+	</p>
+  <label for="percent" style="font-size: 15px">Choose Percentage Duration:</label>
+  <select name="percent" id="percent" style="height:17px; width:50px">
+  <option value="0.05">0.05</option>
+  <option value="0.10">0.10</option>
+  <option value="0.15">0.15</option>
+  <option value="0.20">0.20</option>
+  <option value="0.25">0.25</option>
+  <option value="0.30">0.30</option>
+  <option value="0.35">0.35</option>
+  <option value="0.40">0.40</option>
+  <option value="0.45">0.45</option>
+  <option value="0.50">0.50</option>
+  <option value="0.55">0.55</option>
+  <option value="0.60">0.60</option>
+  <option value="0.65">0.65</option>
+  <option value="0.70">0.70</option>
+  </select>
+</form>
+
